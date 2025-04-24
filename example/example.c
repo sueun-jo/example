@@ -1,20 +1,21 @@
-﻿
-#include <stdio.h>
+﻿#include <stdio.h>
 
-int main()
+int main(void)
 {
-    int num1 = 12;
-    int num2 = 12;
-    
-    printf("num1: %d\n", num1);
-    printf("num1++: %d\n", num1++); //후위 증가
-    printf("num1: %d\n", num1); //증가 된 값 
+	int dan = 0;
+	int num = 1;
 
-    printf("num2: %d\n", num2);
-    printf("++num2: %d\n", ++num2);
-    printf("num2: %d", num2);
-   
-    return 0;
+	printf("몇 단: ");
+	scanf_s("%d", &dan);
+
+	while (num < 10) {
+
+		printf("%d x %d = %d \n", dan, num, dan * num);
+		num++;
+
+	}
+
+	
+	return 0;
 }
-
 
