@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+typedef struct point {
+	int xpos;
+	int ypos;
+	
+} Point;
+
+typedef struct rect {
+	Point point;
+}Rect;
+
+void PrintArea(Rect * rptr1, Rect * rptr2) {
+    int width = (rptr2->point).xpos - (rptr1->point).xpos;
+	int height = (rptr2->point).ypos - (rptr1->point).ypos;
+	printf("area : %d", width*height);
+}
+
+void ShowFourpoint(Rect * rptr1, Rect *rptr2) {
+	int width = (rptr2->point).xpos - (rptr1->point).xpos;
+	int height = (rptr2->point).ypos - (rptr1->point).ypos;
+
+	printf("[%d %d]\n", (rptr1->point).xpos, (rptr1->point).ypos); // 0,0
+	printf("[%d %d]\n", (rptr1->point).xpos + width, (rptr1->point).ypos); // 100,0
+	printf("[%d %d]\n", (rptr2->point).xpos, (rptr2->point).ypos); // 100, 100
+	printf("[%d %d]\n", (rptr2->point).xpos - width, (rptr2->point).ypos); // 0,100
+
+}
+int main(void) {
+
+	Rect r1 = { 0,0 };
+	Rect r2 = { 100, 100 };
+	ShowFourpoint(&r1, &r2);
+    PrintArea(&r1, &r2);
+
+	return 0;
+}
