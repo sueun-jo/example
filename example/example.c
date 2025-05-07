@@ -11,6 +11,7 @@ int main(void)
 	while (num < 10) {
 
 		printf("%d x %d = %d \n", dan, num, dan * num);
+		printf("%d x %d = %d \n", dan, num, dan * num);
 		num++;
 
 	}
